@@ -1,0 +1,141 @@
+@forward "./reset";
+
+$opacity-lists: 0.625s, 0.75s, 0.875s, 1s, 1.125s, 1.25s, 1.375s, 1.5s, 1.625s,
+	1.75s, 1.875s, 2s, 2.125s, 2.25s, 2.375s, 2.5s, 2.625s, 2.75s, 2.875s, 3s,
+	3.125s;
+
+@for $i from 1 through length($opacity-lists) {
+	$opacity: nth($opacity-lists, $i);
+
+	.delay-#{$i} {
+		animation-delay: $opacity !important;
+	}
+}
+
+html {
+	@media (max-width: 500px) {
+		font-size: 52%;
+	}
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #edaf38;
+	position: relative;
+	font-family: "DM Sans", serif;
+}
+
+.content {
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -70%);
+	width: 45rem;
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 15%;
+		background-color: #ffffcd;
+
+		scale: 0;
+		transform-origin: center;
+		animation: scale 0.5s ease-in forwards;
+	}
+
+	&__box {
+		width: 100%;
+		padding-bottom: 1.5rem;
+
+		&-heading {
+			color: #ffffcd;
+			font-size: 4rem;
+			word-spacing: -0.8rem;
+			text-align: center;
+		}
+
+		& span {
+			opacity: 0;
+			animation: show 3.125s ease forwards;
+		}
+	}
+}
+
+@keyframes show {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes scale {
+	to {
+		scale: 1;
+	}
+}
+
+.content__art {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 14.3rem;
+	height: 18.5rem;
+
+	&-triangle-left {
+		width: 0;
+		height: 0;
+		border-left: 2.6rem solid transparent;
+		border-right: 2.6rem solid transparent;
+		border-bottom: 5rem solid #ffffcd;
+	}
+
+	&-triangle-right {
+		width: 0;
+		height: 0;
+		border-left: 2.6rem solid transparent;
+		border-right: 2.6rem solid transparent;
+		border-bottom: 5rem solid #ffffcd;
+		position: absolute;
+		top: -0.1rem;
+		right: 0.1rem;
+	}
+
+	&-triangle-center {
+		width: 0;
+		height: 0;
+		border-left: 7.15rem solid transparent;
+		border-right: 7.15rem solid transparent;
+		border-top: 13.5rem solid #ffffcd;
+		position: absolute;
+		left: 0;
+		bottom: 0.2rem;
+	}
+
+	&-triangle-low-left {
+		border-left: 1.5rem solid transparent;
+		border-right: 1.5rem solid transparent;
+		border-top: 3rem solid #edaf38;
+		position: absolute;
+		top: 39%;
+		left: 26%;
+	}
+
+	&-triangle-low-right {
+		border-left: 1.5rem solid transparent;
+		border-right: 1.5rem solid transparent;
+		border-top: 3rem solid #edaf38;
+		position: absolute;
+		top: 39%;
+		right: 26%;
+	}
+}

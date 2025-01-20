@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+input,
+button,
+textarea {
+  background-color: #fff;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.delay-1 {
+  animation-delay: 0.625s !important;
+}
+
+.delay-2 {
+  animation-delay: 0.75s !important;
+}
+
+.delay-3 {
+  animation-delay: 0.875s !important;
+}
+
+.delay-4 {
+  animation-delay: 1s !important;
+}
+
+.delay-5 {
+  animation-delay: 1.125s !important;
+}
+
+.delay-6 {
+  animation-delay: 1.25s !important;
+}
+
+.delay-7 {
+  animation-delay: 1.375s !important;
+}
+
+.delay-8 {
+  animation-delay: 1.5s !important;
+}
+
+.delay-9 {
+  animation-delay: 1.625s !important;
+}
+
+.delay-10 {
+  animation-delay: 1.75s !important;
+}
+
+.delay-11 {
+  animation-delay: 1.875s !important;
+}
+
+.delay-12 {
+  animation-delay: 2s !important;
+}
+
+.delay-13 {
+  animation-delay: 2.125s !important;
+}
+
+.delay-14 {
+  animation-delay: 2.25s !important;
+}
+
+.delay-15 {
+  animation-delay: 2.375s !important;
+}
+
+.delay-16 {
+  animation-delay: 2.5s !important;
+}
+
+.delay-17 {
+  animation-delay: 2.625s !important;
+}
+
+.delay-18 {
+  animation-delay: 2.75s !important;
+}
+
+.delay-19 {
+  animation-delay: 2.875s !important;
+}
+
+.delay-20 {
+  animation-delay: 3s !important;
+}
+
+.delay-21 {
+  animation-delay: 3.125s !important;
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 52%;
+  }
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #edaf38;
+  position: relative;
+  font-family: "DM Sans", serif;
+}
+
+.content {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  width: 45rem;
+}
+.content::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background-color: #ffffcd;
+  scale: 0;
+  transform-origin: center;
+  animation: scale 0.5s ease-in forwards;
+}
+.content__box {
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+.content__box-heading {
+  color: #ffffcd;
+  font-size: 4rem;
+  word-spacing: -0.8rem;
+  text-align: center;
+}
+.content__box span {
+  opacity: 0;
+  animation: show 3.125s ease forwards;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes scale {
+  to {
+    scale: 1;
+  }
+}
+.content__art {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14.3rem;
+  height: 18.5rem;
+}
+.content__art-triangle-left {
+  width: 0;
+  height: 0;
+  border-left: 2.6rem solid transparent;
+  border-right: 2.6rem solid transparent;
+  border-bottom: 5rem solid #ffffcd;
+}
+.content__art-triangle-right {
+  width: 0;
+  height: 0;
+  border-left: 2.6rem solid transparent;
+  border-right: 2.6rem solid transparent;
+  border-bottom: 5rem solid #ffffcd;
+  position: absolute;
+  top: -0.1rem;
+  right: 0.1rem;
+}
+.content__art-triangle-center {
+  width: 0;
+  height: 0;
+  border-left: 7.15rem solid transparent;
+  border-right: 7.15rem solid transparent;
+  border-top: 13.5rem solid #ffffcd;
+  position: absolute;
+  left: 0;
+  bottom: 0.2rem;
+}
+.content__art-triangle-low-left {
+  border-left: 1.5rem solid transparent;
+  border-right: 1.5rem solid transparent;
+  border-top: 3rem solid #edaf38;
+  position: absolute;
+  top: 39%;
+  left: 26%;
+}
+.content__art-triangle-low-right {
+  border-left: 1.5rem solid transparent;
+  border-right: 1.5rem solid transparent;
+  border-top: 3rem solid #edaf38;
+  position: absolute;
+  top: 39%;
+  right: 26%;
+}
